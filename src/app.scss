@@ -192,9 +192,10 @@ main{
 .autograph{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    //flex-direction: row;
+    flex-flow: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color:$blackAutograph;
     padding: 0 5%;
     .autologo{
@@ -230,7 +231,7 @@ main{
 }
 
 
-@media (max-width:540px) {
+@media (max-width:576px) {
     header{
         .weight{
             grid-column: 2/-2;
@@ -289,10 +290,6 @@ main{
                 }
             }
         }
-    }
-    .autograph{
-        display: flex;
-        flex-direction: column;
     }
 }
 
