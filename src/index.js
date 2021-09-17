@@ -1,14 +1,12 @@
 import './app.scss';
 import './calculator';
 
-import './assets/astro.svg';
 import './assets/background.jpeg';
 import './assets/jupiter.png';
 import './assets/marte.png';
 import './assets/mercurio.png';
 import './assets/neptuno.png';
 import './assets/pluton.png';
-import './assets/rocket.png';
 import './assets/saturno.png';
 import './assets/tierra.png';
 import './assets/urano.png';

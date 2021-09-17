@@ -136,9 +136,9 @@ main{
         flex-flow: wrap;
         justify-content: space-evenly;
         width: 90%;
-        margin: 0 auto;
         padding: 40px 0;
-        gap: 2%;
+        gap: 3%;
+        height: fit-content;
         .planet{
             margin-bottom: 100px;
             max-width: 300px;
@@ -146,7 +146,6 @@ main{
             align-items: center;
             justify-content: flex-start;
             text-align: center;
-            flex-basis: 80%;
             flex-direction: column;
             background-image: linear-gradient(to top, #3f0eaf 0%, #22075560 100%);
             backdrop-filter: $blur;
@@ -179,7 +178,7 @@ main{
                 display: flex;
                 justify-content: center;
                 img{
-                    width: 170%;
+                    width: 160%;
                 }
             }
             .result{
@@ -223,13 +222,13 @@ main{
         li{
             font-size: 1.5em;
             margin-left: 10px;
-            
             &:nth-child(3){
                 margin-left: 10%;
             }
         }
     }
 }
+
 
 @media (max-width:540px) {
     header{
@@ -256,7 +255,7 @@ main{
             grid-column: 2/-2;
             margin-top: 25%;
             margin-bottom: 40%;
-            font-size: 60px;
+            font-size: $big;
             line-height: 60px;
         }
         p{
@@ -294,5 +293,17 @@ main{
     .autograph{
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width:360px){
+    header{
+        h1{
+            grid-column: 2/-2;
+            margin-top: 25%;
+            margin-bottom: 40%;
+            font-size: 5em;
+            line-height: 60px;
+        }
     }
 }
