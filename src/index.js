@@ -1,6 +1,7 @@
 import './app.scss';
 import './calculator';
 
+import "./assets/favicon.ico";
 import './assets/background.jpeg';
 import './assets/jupiter.png';
 import './assets/marte.png';
