@@ -1,0 +1,298 @@
+@import './modules/variables.scss';
+@import './modules/_mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+
+
+
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Oxanium',sans-serif, cursive;
+    background: url(./assets/background.jpeg) no-repeat center center fixed;
+    color: $white;
+}
+
+header{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    text-align: center;
+    .weight{
+        grid-column: 3/4;
+        display: flex;
+        flex-direction: row;
+        background-image: linear-gradient(to right, #2af598 0%, #009efd 95%);
+        box-shadow: $shadow;
+        backdrop-filter: $blur;
+        border-radius: 50px;
+        align-items: center;
+        justify-content: space-between;
+        .earth{
+            position: relative;
+            left: -18%;
+            img{
+                width: 150px;
+                box-shadow: 4px 4px 15px rgba(22, 0, 34, 0.452);
+                border-radius: 100%;
+            }
+        }
+        .calc{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            left: -18%;
+            width: 100%;
+            padding: 7% 0;
+            label{
+                color: $white;
+                font-size: $medium;
+                line-height: 30px;
+                text-shadow: 4px 4px 5px rgba(22, 0, 34, 0.25);
+            }
+            .data{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 8%;
+                input{
+                    border-radius: 50px 0 0 50px;
+                    height: 50px;
+                    color:$violet;
+                    font-size: $medium;
+                    width: 100px;
+                    text-align: center;
+                    font-weight: 600;
+                    background-color: $white;
+                    border-style: none;
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                        box-shadow: $shadow;
+                    }
+                }
+                .button{
+                    text-decoration: none;
+                    @include center;
+                    width: 150px;
+                    font-size: 2em;
+                    color: $white;
+                    font-weight: 400;
+                    background-image: linear-gradient(to top, #6a11cb 0%, #2575fc 100%);
+                    border-style: none;
+                    border-radius: 0 50px 50px 0 ;
+                    box-shadow: $shadow;
+                    &:hover{
+                        background-image: linear-gradient(to bottom, #6a11cb 0%, #2575fc 100%);
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    h1{
+        grid-column: 1/-1;
+        font-size: $hyperbig;
+        line-height: 75px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom: 7%;
+        text-shadow: 4px 4px 15px rgba(158, 77, 202, 0.5);
+    }
+    p{
+        grid-column: 1/-1;
+        font-size: $medium;
+        font-weight:200;
+        display: flex;
+        justify-content: center;
+        margin: 4% 0;
+        padding:4% 0;
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    .container{
+        grid-column: 2/8;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-evenly;
+        width: 90%;
+        margin: 0 auto;
+        padding: 40px 0;
+        gap: 2%;
+        .planet{
+            margin-bottom: 100px;
+            max-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            flex-basis: 80%;
+            flex-direction: column;
+            background-image: linear-gradient(to top, #3f0eaf 0%, #22075560 100%);
+            backdrop-filter: $blur;
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+            box-shadow: $shadow;
+            h2{
+                font-size: $small;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-top: -10%;
+            }
+            h3{
+                font-size: 3.5em;
+                font-weight: 100;
+                margin: 0 auto 10% auto;
+            }
+            figure{
+                position: relative;
+                top: -15%;
+            }
+            .border{
+                border-top: 1px solid (rgba($color: $lightBlue, $alpha: 0.6)) ;
+                width: 70%;
+            }
+            .big{
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 170%;
+                }
+            }
+            .result{
+                font-size: $big;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.autograph{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:$blackAutograph;
+    padding: 0 5%;
+    .autologo{
+        img{
+            width: 40px;
+        }
+    }
+    .contactme{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        align-items: center;
+        justify-content: flex-end;
+        width: 80%;
+        a{
+            text-decoration: none;
+            opacity: 0.7;
+            img{
+                width: 30px;
+            }
+            &:hover{
+                opacity: 1;
+            }
+        }
+        li{
+            font-size: 1.5em;
+            margin-left: 10px;
+            
+            &:nth-child(3){
+                margin-left: 10%;
+            }
+        }
+    }
+}
+
+@media (max-width:540px) {
+    header{
+        .weight{
+            grid-column: 2/-2;
+            display: flex;
+            flex-direction: column;
+            background-image: linear-gradient(to bottom, #2af598 0%, #009efd 95%);
+            .earth{
+                position: relative;
+                left: 0;
+                top: -18%;
+            }
+            .calc{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                left: 0;
+                top: -18%;
+                padding: 2% 5%;
+            }
+        }
+        h1{
+            grid-column: 2/-2;
+            margin-top: 25%;
+            margin-bottom: 40%;
+            font-size: 60px;
+            line-height: 60px;
+        }
+        p{
+            grid-column: 2/-2;
+            font-size: $small;
+            font-weight:200;
+            padding: 20% 0;
+        }
+    }
+}
+
+@media (max-width:411px) {
+    header{
+        .weight{
+            .calc{
+                .data{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 20%;
+                    input{
+                        border-radius: 25px 25px 0 0;
+                    }
+                    .button{
+                        border-radius: 25px;
+                        padding: 8%;
+                        &:hover{
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .autograph{
+        display: flex;
+        flex-direction: column;
+    }
+}
